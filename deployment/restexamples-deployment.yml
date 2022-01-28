@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restexamples
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: restexamples
+  template:
+    metadata:
+      labels:
+        app: restexamples
+    spec:
+      containers:
+        - image: ghcr.io/jonashackt/restexamples:latest@sha256:8f970d44b4a91847230b8a8794c160bcbda1ec28f8866492f73aa3c3e470f853
+          name: restexamples
+          ports:
+            - containerPort: 8090
+      imagePullSecrets:
+        - name: github-container-registry
