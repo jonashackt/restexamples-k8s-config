@@ -14,7 +14,7 @@ spec:
         app: restexamples
     spec:
       containers:
-        - image: ghcr.io/jonashackt/restexamples@sha256:f01ffa895db8b7e25d5410ce4d33493fd8db9d8e8b089aaa265020be8099ff38
+        - image: ghcr.io/jonashackt/restexamples@sha256:8f970d44b4a91847230b8a8794c160bcbda1ec28f8866492f73aa3c3e470f853
           name: restexamples
           ports:
             - containerPort: 8090
